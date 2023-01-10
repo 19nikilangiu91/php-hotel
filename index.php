@@ -95,7 +95,12 @@ foreach ($hotels as $hotel) {
               <?php echo $hotel["description"] ?>
             </td>
             <td>
-              <?php echo $hotel["parking"] ?>
+              <?php
+              if ($hotel["parking"] === true) {
+                echo "Available";
+              } else {
+                echo "Unavaible";
+              } ?>
             </td>
             <td>
               <?php echo $hotel["vote"] ?>
